@@ -1,0 +1,14 @@
+{% extends 'mem/base.html' %}
+
+{% block content %}
+
+<h1> {{ title }}</h1>
+    <p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name }}<br>
+            {{ form.telephone }}<br>
+            <button type="submit" class="btn btn-success">Оставить данные</button>
+        </form>
+    </p>
+{% endblock %}
