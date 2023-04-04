@@ -7,5 +7,6 @@ urlpatterns = [
     path('ab/', ab, name ='ab'),
     path('find/', find, name ='find'),
     path('contact/', contact, name ='contact'),
-    path('login/', login, name ='login')
+    path('login/', LoginUser.as_view(), name ='login'),
+    path('logout/', LoginUser.as_view(), name ='logout')
 ]
